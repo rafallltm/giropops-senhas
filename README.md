@@ -4,7 +4,7 @@
 
 1. **Clone o repositório:**
     ```sh
-    git clone -b dev https://github.com/rafallltm/giropops-senhas.git
+    git clone -b rtm https://github.com/rafallltm/giropops-senhas.git
     ```
 
 2. **Entre no diretório:**
