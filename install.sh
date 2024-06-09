@@ -7,7 +7,7 @@ log() {
 
 # Clone do repositório
 log "Clonando o repositório..."
-git clone -b dev https://github.com/rafallltm/giropops-senhas.git
+git clone -b rtm https://github.com/rafallltm/giropops-senhas.git
 cd giropops-senhas || { log "Falha ao entrar no diretório do repositório."; exit 1; }
 
 # Verificar se o Python3 e pip estão instalados
