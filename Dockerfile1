@@ -1,0 +1,21 @@
+FROM alpine:3.16
+
+WORKDIR /app
+COPY . .
+
+# Atualizar os pacotes e instalar as dependências necessárias
+RUN apk update && \
+    apk add python3 py3-pip redis && \
+    pip3 install --no-cache-dir -r requirements.txt && \
+    pip3 install flask prometheus_client && \
+    pip3 install --upgrade flask
+
+# Definir a variável de ambiente para o host Redis
+ENV REDIS_HOST=127.0.0.1
+
+# Expor a porta 5000
+EXPOSE 5000
+
+# Iniciar o servidor Redis em segundo plano e iniciar o aplicativo Flask
+CMD redis-server --daemonize yes && flask run --host=0.0.0.0
+
