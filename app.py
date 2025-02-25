@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, Response
 import redis
 import string
 import random
@@ -70,7 +70,7 @@ def listar_senhas():
 
 @app.route('/metrics')
 def metrics():
-    return generate_latest()
+    return Response(generate_latest(), content_type='text/plain')
 
 if __name__ == '__main__':
     import logging
