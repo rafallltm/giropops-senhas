@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locust
+  namespace: giropops-senhas
+  labels:
+    app: locust
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: locust
+  template:
+    metadata:
+      labels:
+        app: locust
+    spec:
+      containers:
+      - name: locust
+        image: locustio/locust
+        command: ["locust", "-f", "/mnt/locust/locustfile.py", "--host", "http://giropops.pum"]
+        ports:
+        - containerPort: 8089
+        volumeMounts:
+        - name: locust-script
+          mountPath: /mnt/locust
+      volumes:
+      - name: locust-script
+        configMap:
+          name: locustfile-config
+
+
+
