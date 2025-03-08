@@ -64,6 +64,5 @@ jobs:
             ./manifestos/redis-deployment.yaml
             ./manifestos/giropops-senhas-svc.yaml
             ./manifestos/redis-svc.yaml
-            ./ingress/giropops-ingress.yaml
           images: |
             rafallltm/giropops-senhas:2.${{ github.run_number }}
