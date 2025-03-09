@@ -1,7 +1,11 @@
-name: CI-CD
+name: CI-CD-EKS
 
 on:
-  workflow_dispatch:  # Permite disparar o pipeline manualmente pela interface do GitHub
+  push:
+    branches:
+      - main  # Vai disparar quando fizer push para a branch main
+#      - dev/k8s
+  workflow_dispatch:  # Permite disparar o workflow manualmente    
 
 jobs:
   ci:
