@@ -70,3 +70,4 @@ jobs:
             ./manifestos/redis-svc.yaml
           images: |
             rafallltm/giropops-senhas:2.${{ github.run_number }}
+          namespace: giropops-senhas  # Definir explicitamente o namespace correto
