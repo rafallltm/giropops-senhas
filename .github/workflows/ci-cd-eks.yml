@@ -59,6 +59,9 @@ jobs:
       - name: Configurar kubectl
         run: aws eks update-kubeconfig --name meu-cluster
 
+      - name: Create namespace giropops-senhas
+        run: kubectl create namespace giropops-senhas || true
+
       # Deploy no Kubernetes  
       - name: Deploy to Kubernetes
         uses: Azure/k8s-deploy@v5
