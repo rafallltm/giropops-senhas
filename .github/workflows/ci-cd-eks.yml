@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Vai disparar quando fizer push na main
-#      - dev/k8s 
+      - dev/k8s 
   workflow_dispatch:  # Permite disparar o workflow manualmente    
 
 jobs:
