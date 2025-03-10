@@ -57,7 +57,7 @@ jobs:
           
       # Atualizar kubeconfig
       - name: Configurar kubectl
-        run: aws eks update-kubeconfig --name k8s-aws
+        run: aws eks update-kubeconfig --name meu-cluster
 
       # Deploy no Kubernetes  
       - name: Deploy to Kubernetes
