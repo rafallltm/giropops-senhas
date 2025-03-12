@@ -62,6 +62,11 @@ jobs:
       - name: Create namespace giropops-senhas
         run: kubectl create namespace giropops-senhas || true
 
+      # Instalar o Helm
+      - name: ⚙️ Instalar Helm
+        run: |
+        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
       # Deploy no Kubernetes  
       - name: Deploy to Kubernetes
         uses: Azure/k8s-deploy@v5
