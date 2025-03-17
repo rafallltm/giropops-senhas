@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Vai disparar quando fizer push na main
-      - dev/k8s 
+#      - dev/k8s 
   workflow_dispatch:  # Permite disparar o workflow manualmente    
 
 jobs:
@@ -62,7 +62,8 @@ jobs:
       - name: Create namespace giropops-senhas
         run: kubectl create namespace giropops-senhas || true
 
-      - name: Install dependencies
+      - name: Install Helm 
+        uses: azure/setup-helm@v1
         run: |
           helm repo add stable https://charts.helm.sh/stable
           helm repo update
