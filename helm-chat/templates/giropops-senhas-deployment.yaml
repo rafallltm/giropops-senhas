@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: giropops-senhas-deployment
+  labels:
+    app: giropops-senhas
+spec:
+  replicas: {{ .Values.giropops_senhas.replicas }}
+  selector:
+    matchLabels:
+      app: giropops-senhas
+  template:
+    metadata:
+      labels:
+        app: giropops-senhas
+    spec:
+      containers:
+      - name: giropops-senhas
+        image: {{ .Values.giropops_senhas.image }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: {{ .Values.giropops_senhas.port }}
+        env:
+        - name: REDIS_HOST
+          value: "redis-service"
+        resources:
+          requests:
+            cpu: {{ .Values.giropops_senhas.resources.requests.cpu }}
+            memory: {{ .Values.giropops_senhas.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.giropops_senhas.resources.limits.cpu }}
+            memory: {{ .Values.giropops_senhas.resources.limits.memory }}

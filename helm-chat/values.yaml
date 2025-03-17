@@ -1,0 +1,40 @@
+giropops_senhas:
+  name: giropops-senhas
+  image: rafallltm/giropops-senhas:v1-dev
+  replicas: 2
+  port: 5000
+  labels:
+    app: giropops-senhas
+    env: dev
+  service:
+    name: giropops-senhas-service-port
+    port: 5000  
+    targetPort: 5000
+    type: ClusterIP
+  resources:
+    requests:
+      cpu: "250m"  
+      memory: "64Mi"
+    limits:
+      cpu: "500m"  
+      memory: "128Mi"
+
+redis:
+  name: redis
+  image: redis:alpine3.19
+  replicas: 1
+  port: 6379
+  labels:
+    app: redis
+  service:
+    name: redis-service-port
+    port: 6379  
+    targetPort: 6379
+    type: ClusterIP
+  resources:
+    requests:
+      cpu: "100m"  
+      memory: "128Mi"
+    limits:
+      cpu: "250m"  
+      memory: "256Mi"
