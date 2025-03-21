@@ -4,6 +4,7 @@ metadata:
   name: redis-deployment
   labels:
     app: redis
+  namespace: {{ .Values.namespace }}
 spec:
   replicas: {{ .Values.redis.replicaCount }}
   selector:

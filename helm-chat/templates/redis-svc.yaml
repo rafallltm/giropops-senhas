@@ -4,6 +4,7 @@ metadata:
   name: redis-service
   labels:
     app: redis
+  namespace: {{ .Values.namespace }}
 spec:
   selector:
     app: redis

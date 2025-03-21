@@ -52,4 +52,4 @@ redis:
       memory: 256Mi
 
 # Namespace
-namespace: nxzero
+namespace: linuxtips

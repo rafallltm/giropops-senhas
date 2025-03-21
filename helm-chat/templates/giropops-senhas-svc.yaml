@@ -4,6 +4,8 @@ metadata:
   name: giropops-service
   labels:
     app: giropops-senhas
+  namespace: {{ .Values.namespace }}
+
 spec:
   selector:
     app: giropops-senhas

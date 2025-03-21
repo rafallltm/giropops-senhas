@@ -4,6 +4,8 @@ metadata:
   name: giropops-deployment
   labels:
     app: giropops-senhas
+  namespace: {{ .Values.namespace }}
+  
 spec:
   replicas: {{ .Values.giropops.replicaCount }}
   selector:
