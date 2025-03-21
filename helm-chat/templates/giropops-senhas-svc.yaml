@@ -9,6 +9,7 @@ spec:
     app: giropops-senhas
   ports:
     - protocol: TCP
-      port: {{ .Values.giropops_senhas.service.port }}
-      targetPort: {{ .Values.giropops_senhas.service.targetPort }}
-  type: {{ .Values.giropops_senhas.service.type }}
+      port: {{ .Values.giropops.service.port }}
+      targetPort: {{ .Values.giropops.service.port }}
+      name: http
+  type: {{ .Values.giropops.service.type }}

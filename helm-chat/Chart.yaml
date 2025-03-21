@@ -1,6 +1,5 @@
 apiVersion: v2
-name: giropops-senhas
-description: A Helm chart for Kubernetes
-version: 1.0.1
-sources:
-  - https://github.com/rafallltm/LINUXtips-giropops-senhas.git
+name: giropops-chart
+description: A Helm chart for deploying the Giropops application and Redis
+version: 1.0.0
+appVersion: "1.0.0"

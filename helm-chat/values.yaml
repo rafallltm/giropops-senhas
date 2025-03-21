@@ -1,40 +1,55 @@
-giropops_senhas:
-  name: giropops-senhas
-  image: rafallltm/giropops-senhas:v1-dev
-  replicas: 2
-  port: 5000
-  labels:
-    app: giropops-senhas
-    env: dev
+# Giropops Application
+giropops:
+  replicaCount: 1
+  image:
+    repository: rafallltm/giropops-senhas
+    tag: v6-dev
+    pullPolicy: Always
   service:
-    name: giropops-senhas-service-port
-    port: 5000  
-    targetPort: 5000
-    type: ClusterIP
+    type: LoadBalancer
+    port: 5000
+  env:
+    REDIS_HOST: redis-service
   resources:
     requests:
-      cpu: "250m"  
-      memory: "64Mi"
+      cpu: 250m
+      memory: 64Mi
     limits:
-      cpu: "500m"  
-      memory: "128Mi"
+      cpu: 500m
+      memory: 128Mi
+  livenessProbe:
+    httpGet:
+      path: /
+      port: 5000
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readinessProbe:
+    httpGet:
+      path: /
+      port: 5000
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
 
+# Redis
 redis:
-  name: redis
-  image: redis:alpine3.19
-  replicas: 1
-  port: 6379
-  labels:
-    app: redis
+  replicaCount: 1
+  image:
+    repository: redis
+    tag: alpine3.19
   service:
-    name: redis-service-port
-    port: 6379  
-    targetPort: 6379
     type: ClusterIP
+    port: 6379
   resources:
     requests:
-      cpu: "100m"  
-      memory: "128Mi"
+      cpu: 100m
+      memory: 128Mi
     limits:
-      cpu: "250m"  
-      memory: "256Mi"
+      cpu: 250m
+      memory: 256Mi
+
+# Namespace
+namespace: nxzero

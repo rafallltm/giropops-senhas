@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: giropops-senhas-deployment
+  name: giropops-deployment
   labels:
     app: giropops-senhas
 spec:
-  replicas: {{ .Values.giropops_senhas.replicas }}
+  replicas: {{ .Values.giropops.replicaCount }}
   selector:
     matchLabels:
       app: giropops-senhas
@@ -16,17 +16,16 @@ spec:
     spec:
       containers:
       - name: giropops-senhas
-        image: {{ .Values.giropops_senhas.image }}
-        imagePullPolicy: Always
+        image: "{{ .Values.giropops.image.repository }}:{{ .Values.giropops.image.tag }}"
+        imagePullPolicy: {{ .Values.giropops.image.pullPolicy }}
         ports:
-        - containerPort: {{ .Values.giropops_senhas.port }}
+        - containerPort: {{ .Values.giropops.service.port }}
         env:
         - name: REDIS_HOST
-          value: "redis-service"
+          value: {{ .Values.giropops.env.REDIS_HOST }}
         resources:
-          requests:
-            cpu: {{ .Values.giropops_senhas.resources.requests.cpu }}
-            memory: {{ .Values.giropops_senhas.resources.requests.memory }}
-          limits:
-            cpu: {{ .Values.giropops_senhas.resources.limits.cpu }}
-            memory: {{ .Values.giropops_senhas.resources.limits.memory }}
+          {{- toYaml .Values.giropops.resources | nindent 10 }}
+        livenessProbe:
+          {{- toYaml .Values.giropops.livenessProbe | nindent 10 }}
+        readinessProbe:
+          {{- toYaml .Values.giropops.readinessProbe | nindent 10 }}
