@@ -3,8 +3,7 @@ name: CI-CD-EKS
 on:
   push:
     branches:
-      - main  # Vai disparar quando fizer push na main
-#      - dev/k8s 
+      - dev/k8s  # Executar apenas na branch dev/k8s
   workflow_dispatch:  # Permite disparar o workflow manualmente    
 
 jobs:
@@ -32,7 +31,7 @@ jobs:
           push: true
           tags: |
             rafallltm/giropops-senhas:latest
-            rafallltm/giropops-senhas:2.${{ github.run_number }}
+            rafallltm/giropops-senhas:${{ github.sha }}
 
   cd:
     runs-on: ubuntu-latest
@@ -59,24 +58,17 @@ jobs:
       - name: Configurar kubectl
         run: aws eks update-kubeconfig --name meu-cluster
 
-      - name: Create namespace giropops-senhas
-        run: kubectl create namespace giropops-senhas || true
+      # Validar o Helm Chart
+      - name: Helm Lint
+        run: helm lint ./helm-chat
 
-      - name: Install Helm 
-        uses: azure/setup-helm@v1
+      # Instalar app com Helm Chart
+      - name: Deploy with Helm
         run: |
-          helm repo add stable https://charts.helm.sh/stable
-          helm repo update
-
-      # Deploy no Kubernetes  
-      - name: Deploy to Kubernetes
-        uses: Azure/k8s-deploy@v5
-        with:
-          manifests: |
-            ./manifestos/giropops-senhas-deployment.yaml
-            ./manifestos/redis-deployment.yaml
-            ./manifestos/giropops-senhas-svc.yaml
-            ./manifestos/redis-svc.yaml
-          images: |
-            rafallltm/giropops-senhas:2.${{ github.run_number }}
-          namespace: giropops-senhas  # Definir explicitamente o namespace correto
+          helm upgrade --install giropops ./helm-chat \
+            --namespace giropops-senhas \
+            --create-namespace \
+            --set image.repository=rafallltm/giropops-senhas \
+            --set image.tag=${{ github.sha }} \
+            --atomic \
+            --timeout 5m
