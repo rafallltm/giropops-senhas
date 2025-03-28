@@ -31,7 +31,7 @@ jobs:
           push: true
           tags: |
             rafallltm/giropops-senhas:latest
-            rafallltm/giropops-senhas:${{ github.sha }}
+            rafallltm/giropops-senhas:eks-v${{ github.sha }}
 
   cd:
     runs-on: ubuntu-latest
@@ -66,9 +66,7 @@ jobs:
       - name: Deploy with Helm
         run: |
           helm upgrade --install giropops ./helm-chat \
-            --namespace giropops-senhas \
-            --create-namespace \
             --set image.repository=rafallltm/giropops-senhas \
-            --set image.tag=${{ github.sha }} \
+            --set image.tag=eks-v${{ github.sha }} \
             --atomic \
             --timeout 5m
