@@ -1,0 +1,135 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2025-03-31T01:57:08.268722248-03:00",
+  "ArtifactName": "rafallltm/giropops-senhas:v8-dev",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "wolfi",
+      "Name": "20230201"
+    },
+    "ImageID": "sha256:0548960f3e9ae0e374a942e414311fa2bb44c1994648e665816478299a7eccc6",
+    "DiffIDs": [
+      "sha256:5efd17846f697b9606e0dee065bd90f22debd9a7d8c86d822993e42ebd08e4a1",
+      "sha256:f3b4698c9082aa0eecf2eb8ca47e87a34713f3c846911c054f92170b0fc716f6",
+      "sha256:5aa8529c6992a4b660a460e4631cfc889ea5911b3b30af2ee099d1dd639d66f1",
+      "sha256:7dacfc31a7567ff79a41e958146100208084ee463399c16339103866c79af068",
+      "sha256:321d9f62d3c9676d0d4e38ff4a5e9609caac2235a2fb40f03039985bfe0afd31",
+      "sha256:ab17baa70d5cf8d6237f62cb38d9367174871f7c609815d9c33d277faaf7f7be",
+      "sha256:75560896f2ebba3547c511614f9080a43a662ac4874e93ba51d48e159373b48d",
+      "sha256:40088db6013a167213be915343b58115bab58bfed1a72d2d285e259da29d3dc0"
+    ],
+    "RepoTags": [
+      "app-app:latest",
+      "rafallltm/giropops-senhas:v8-dev"
+    ],
+    "RepoDigests": [
+      "rafallltm/giropops-senhas@sha256:f04d6347eaae04af90f4a38562c1cbfece6669a65aca11aa0110474648d38941"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "author": "github.com/chainguard-dev/apko",
+      "created": "2025-03-31T01:30:14.962475962-03:00",
+      "history": [
+        {
+          "created": "2025-03-18T22:15:31Z",
+          "created_by": "apko",
+          "comment": "This is an apko single-layer image"
+        },
+        {
+          "created": "2025-03-31T04:29:40Z",
+          "created_by": "WORKDIR /app",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-03-31T04:30:14Z",
+          "created_by": "COPY /home/nonroot/.local/lib/python3.13/site-packages /home/nonroot/.local/lib/python3.13/site-packages # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-03-31T04:30:14Z",
+          "created_by": "COPY /home/nonroot/.local/bin /home/nonroot/.local/bin # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-03-31T04:30:14Z",
+          "created_by": "COPY tailwind.config.js LICENSE ./ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-03-31T04:30:14Z",
+          "created_by": "COPY static/ static/ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-03-31T04:30:14Z",
+          "created_by": "COPY templates/ templates/ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-03-31T04:30:14Z",
+          "created_by": "COPY app.py . # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-03-31T04:30:14Z",
+          "created_by": "ENTRYPOINT [\"python\" \"-m\" \"flask\" \"run\" \"--host=0.0.0.0\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:5efd17846f697b9606e0dee065bd90f22debd9a7d8c86d822993e42ebd08e4a1",
+          "sha256:f3b4698c9082aa0eecf2eb8ca47e87a34713f3c846911c054f92170b0fc716f6",
+          "sha256:5aa8529c6992a4b660a460e4631cfc889ea5911b3b30af2ee099d1dd639d66f1",
+          "sha256:7dacfc31a7567ff79a41e958146100208084ee463399c16339103866c79af068",
+          "sha256:321d9f62d3c9676d0d4e38ff4a5e9609caac2235a2fb40f03039985bfe0afd31",
+          "sha256:ab17baa70d5cf8d6237f62cb38d9367174871f7c609815d9c33d277faaf7f7be",
+          "sha256:75560896f2ebba3547c511614f9080a43a662ac4874e93ba51d48e159373b48d",
+          "sha256:40088db6013a167213be915343b58115bab58bfed1a72d2d285e259da29d3dc0"
+        ]
+      },
+      "config": {
+        "Entrypoint": [
+          "python",
+          "-m",
+          "flask",
+          "run",
+          "--host=0.0.0.0"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt"
+        ],
+        "Labels": {
+          "com.docker.compose.project": "app",
+          "com.docker.compose.service": "app",
+          "com.docker.compose.version": "2.34.0",
+          "dev.chainguard.package.main": "",
+          "org.opencontainers.image.authors": "Chainguard Team https://www.chainguard.dev/",
+          "org.opencontainers.image.created": "2025-03-18T22:15:31Z",
+          "org.opencontainers.image.source": "https://github.com/chainguard-images/images/tree/main/images/python",
+          "org.opencontainers.image.url": "https://images.chainguard.dev/directory/image/python/overview",
+          "org.opencontainers.image.vendor": "Chainguard"
+        },
+        "User": "65532",
+        "WorkingDir": "/app"
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "rafallltm/giropops-senhas:v8-dev (wolfi 20230201)",
+      "Class": "os-pkgs",
+      "Type": "wolfi"
+    },
+    {
+      "Target": "Python",
+      "Class": "lang-pkgs",
+      "Type": "python-pkg"
+    }
+  ]
+}
