@@ -1,25 +1,57 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev  # Dockerfile específico para dev
+    container_name: giropops-app-dev  # Nome explícito
     environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - PYTHONUNBUFFERED=1  # Melhora logging
     ports:
-      - 5000:5000
-    depends_on:
-      - redis
-    networks:
-      - app-net
-    restart: always
+      - "5000:5000"
     volumes:
       - .:/app
-  redis:
-    image: redis:alpine
-    ports:
-      - 6379:6379
+      - /app/__pycache__  # Ignora cache
+      - /app/.venv  # Evita conflitos com venv local
+    depends_on:
+      redis:
+        condition: service_healthy
     networks:
       - app-net
-    restart: always
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    stdin_open: true  # Permite attach
+    tty: true        # Permite interação
+
+  redis:
+    image: redis:7-alpine
+    container_name: giropops-redis-dev
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data  # Persistência mesmo em dev
+    networks:
+      - app-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    command: redis-server --save 60 1 --loglevel warning
+
+volumes:
+  redis_data:
+    name: giropops-redis-data-dev  # Volume nomeado
+
 networks:
   app-net:
+    name: giropops-network-dev  # Rede nomeada
     driver: bridge
