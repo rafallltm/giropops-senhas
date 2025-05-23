@@ -1,78 +1,125 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-03-31T01:57:08.268722248-03:00",
-  "ArtifactName": "rafallltm/giropops-senhas:v8-dev",
+  "CreatedAt": "2025-05-23T14:36:13.333437535-03:00",
+  "ArtifactName": "rafallltm/giropops-senhas:v10",
   "ArtifactType": "container_image",
   "Metadata": {
+    "Size": 68861952,
     "OS": {
       "Family": "wolfi",
       "Name": "20230201"
     },
-    "ImageID": "sha256:0548960f3e9ae0e374a942e414311fa2bb44c1994648e665816478299a7eccc6",
+    "ImageID": "sha256:8ac6f08b7a04155ae338e09b1cef0432aa1011e6d0e4b3a82546dedd5368b32c",
     "DiffIDs": [
-      "sha256:5efd17846f697b9606e0dee065bd90f22debd9a7d8c86d822993e42ebd08e4a1",
-      "sha256:f3b4698c9082aa0eecf2eb8ca47e87a34713f3c846911c054f92170b0fc716f6",
-      "sha256:5aa8529c6992a4b660a460e4631cfc889ea5911b3b30af2ee099d1dd639d66f1",
-      "sha256:7dacfc31a7567ff79a41e958146100208084ee463399c16339103866c79af068",
-      "sha256:321d9f62d3c9676d0d4e38ff4a5e9609caac2235a2fb40f03039985bfe0afd31",
-      "sha256:ab17baa70d5cf8d6237f62cb38d9367174871f7c609815d9c33d277faaf7f7be",
-      "sha256:75560896f2ebba3547c511614f9080a43a662ac4874e93ba51d48e159373b48d",
-      "sha256:40088db6013a167213be915343b58115bab58bfed1a72d2d285e259da29d3dc0"
+      "sha256:787ad864be6154e366d59e0e68002c3cc5c00ed0d24d61d214875c2b7bf43168",
+      "sha256:317bd0f09938614fef7ce95f7108ed5929bb87664c757ab2f05ad9e36e1845c9",
+      "sha256:cac46e061cd0e31bb337e56621735d42ca6ad7cad665cbd848ac7601665c049f",
+      "sha256:9c508fb01a8d20067bdc8d06632aa0ac85546832d7dda66e8b15b2fe1a8bcfa1",
+      "sha256:25ee175f1dd39d24cffdaad242a851cf50d93528f1b3f321c7f1dd40569a3707",
+      "sha256:659476e345e8635174e5323f16b297bfd7162939d3afc20aaecf21c35e227c06",
+      "sha256:491c5da88d483bec8b0b69067d56c8ecfbe4e55a382a2361ebf92307b841e920",
+      "sha256:66c2e21e7c3ba7f4b118ab1e99bbf363384541f9aa6c768d7a5606bb95c1a9bf",
+      "sha256:adaf9887f9b5ded5ec741a1207dd6ca11aaf991381cebc272625e4f27a9c9646",
+      "sha256:38f7f9880eec5aeab3fb78e5b4f1f2b4d017104d349b599aa23a54d25dce6841",
+      "sha256:d65d3c9f3f7b4a4c5ae08eaae9ac6ff6b20b21f11bc26d08517f3a13431b71fc",
+      "sha256:7415a567ddf7e131c9b94a8e6e0609c75b77c82cb73c4802a7145eb4f66b2e9d",
+      "sha256:fff7239145fe8b7caeff25b1e6ff003c13dd13b0375db9206022eced8b0074a5",
+      "sha256:1a2e3fe59660ab0047fd2cbaa89db2a57c919e52a1abc30e6b749f3f14f813b8",
+      "sha256:b59e0a07fd8d8e1098c79f3934bc22b949d7b9498807845e1a803077722a1e46",
+      "sha256:4e990d2b718ddf621bb052bb817a896d8140d11fbc9d193ffd08a68d6bc78b86",
+      "sha256:827cf0992ba57dc32cfa84de4bf6aa203ede1ad4e916ceef6450f9d385728c4a",
+      "sha256:cb608233b0b0b0198a696d2f6b890804a2ca854d9da347b628e073dee617f06c"
     ],
     "RepoTags": [
       "app-app:latest",
-      "rafallltm/giropops-senhas:v8-dev"
-    ],
-    "RepoDigests": [
-      "rafallltm/giropops-senhas@sha256:f04d6347eaae04af90f4a38562c1cbfece6669a65aca11aa0110474648d38941"
+      "rafallltm/giropops-senhas:v10"
     ],
     "ImageConfig": {
       "architecture": "amd64",
       "author": "github.com/chainguard-dev/apko",
-      "created": "2025-03-31T01:30:14.962475962-03:00",
+      "created": "2025-05-23T14:16:53.451018028-03:00",
       "history": [
         {
-          "created": "2025-03-18T22:15:31Z",
-          "created_by": "apko",
-          "comment": "This is an apko single-layer image"
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
         },
         {
-          "created": "2025-03-31T04:29:40Z",
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-22T20:15:28Z",
+          "created_by": "apko"
+        },
+        {
+          "created": "2025-05-23T17:16:45Z",
           "created_by": "WORKDIR /app",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-31T04:30:14Z",
+          "created": "2025-05-23T17:16:53Z",
           "created_by": "COPY /home/nonroot/.local/lib/python3.13/site-packages /home/nonroot/.local/lib/python3.13/site-packages # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-31T04:30:14Z",
+          "created": "2025-05-23T17:16:53Z",
           "created_by": "COPY /home/nonroot/.local/bin /home/nonroot/.local/bin # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-31T04:30:14Z",
+          "created": "2025-05-23T17:16:53Z",
           "created_by": "COPY tailwind.config.js LICENSE ./ # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-31T04:30:14Z",
+          "created": "2025-05-23T17:16:53Z",
           "created_by": "COPY static/ static/ # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-31T04:30:14Z",
+          "created": "2025-05-23T17:16:53Z",
           "created_by": "COPY templates/ templates/ # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-31T04:30:14Z",
+          "created": "2025-05-23T17:16:53Z",
           "created_by": "COPY app.py . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-03-31T04:30:14Z",
+          "created": "2025-05-23T17:16:53Z",
           "created_by": "ENTRYPOINT [\"python\" \"-m\" \"flask\" \"run\" \"--host=0.0.0.0\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -82,14 +129,24 @@
       "rootfs": {
         "type": "layers",
         "diff_ids": [
-          "sha256:5efd17846f697b9606e0dee065bd90f22debd9a7d8c86d822993e42ebd08e4a1",
-          "sha256:f3b4698c9082aa0eecf2eb8ca47e87a34713f3c846911c054f92170b0fc716f6",
-          "sha256:5aa8529c6992a4b660a460e4631cfc889ea5911b3b30af2ee099d1dd639d66f1",
-          "sha256:7dacfc31a7567ff79a41e958146100208084ee463399c16339103866c79af068",
-          "sha256:321d9f62d3c9676d0d4e38ff4a5e9609caac2235a2fb40f03039985bfe0afd31",
-          "sha256:ab17baa70d5cf8d6237f62cb38d9367174871f7c609815d9c33d277faaf7f7be",
-          "sha256:75560896f2ebba3547c511614f9080a43a662ac4874e93ba51d48e159373b48d",
-          "sha256:40088db6013a167213be915343b58115bab58bfed1a72d2d285e259da29d3dc0"
+          "sha256:787ad864be6154e366d59e0e68002c3cc5c00ed0d24d61d214875c2b7bf43168",
+          "sha256:317bd0f09938614fef7ce95f7108ed5929bb87664c757ab2f05ad9e36e1845c9",
+          "sha256:cac46e061cd0e31bb337e56621735d42ca6ad7cad665cbd848ac7601665c049f",
+          "sha256:9c508fb01a8d20067bdc8d06632aa0ac85546832d7dda66e8b15b2fe1a8bcfa1",
+          "sha256:25ee175f1dd39d24cffdaad242a851cf50d93528f1b3f321c7f1dd40569a3707",
+          "sha256:659476e345e8635174e5323f16b297bfd7162939d3afc20aaecf21c35e227c06",
+          "sha256:491c5da88d483bec8b0b69067d56c8ecfbe4e55a382a2361ebf92307b841e920",
+          "sha256:66c2e21e7c3ba7f4b118ab1e99bbf363384541f9aa6c768d7a5606bb95c1a9bf",
+          "sha256:adaf9887f9b5ded5ec741a1207dd6ca11aaf991381cebc272625e4f27a9c9646",
+          "sha256:38f7f9880eec5aeab3fb78e5b4f1f2b4d017104d349b599aa23a54d25dce6841",
+          "sha256:d65d3c9f3f7b4a4c5ae08eaae9ac6ff6b20b21f11bc26d08517f3a13431b71fc",
+          "sha256:7415a567ddf7e131c9b94a8e6e0609c75b77c82cb73c4802a7145eb4f66b2e9d",
+          "sha256:fff7239145fe8b7caeff25b1e6ff003c13dd13b0375db9206022eced8b0074a5",
+          "sha256:1a2e3fe59660ab0047fd2cbaa89db2a57c919e52a1abc30e6b749f3f14f813b8",
+          "sha256:b59e0a07fd8d8e1098c79f3934bc22b949d7b9498807845e1a803077722a1e46",
+          "sha256:4e990d2b718ddf621bb052bb817a896d8140d11fbc9d193ffd08a68d6bc78b86",
+          "sha256:827cf0992ba57dc32cfa84de4bf6aa203ede1ad4e916ceef6450f9d385728c4a",
+          "sha256:cb608233b0b0b0198a696d2f6b890804a2ca854d9da347b628e073dee617f06c"
         ]
       },
       "config": {
@@ -101,16 +158,16 @@
           "--host=0.0.0.0"
         ],
         "Env": [
-          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin",
           "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt"
         ],
         "Labels": {
           "com.docker.compose.project": "app",
           "com.docker.compose.service": "app",
-          "com.docker.compose.version": "2.34.0",
+          "com.docker.compose.version": "2.35.1",
           "dev.chainguard.package.main": "",
           "org.opencontainers.image.authors": "Chainguard Team https://www.chainguard.dev/",
-          "org.opencontainers.image.created": "2025-03-18T22:15:31Z",
+          "org.opencontainers.image.created": "2025-05-22T20:15:28Z",
           "org.opencontainers.image.source": "https://github.com/chainguard-images/images/tree/main/images/python",
           "org.opencontainers.image.url": "https://images.chainguard.dev/directory/image/python/overview",
           "org.opencontainers.image.vendor": "Chainguard"
@@ -118,11 +175,85 @@
         "User": "65532",
         "WorkingDir": "/app"
       }
-    }
+    },
+    "Layers": [
+      {
+        "Size": 34184192,
+        "DiffID": "sha256:787ad864be6154e366d59e0e68002c3cc5c00ed0d24d61d214875c2b7bf43168"
+      },
+      {
+        "Size": 7072256,
+        "DiffID": "sha256:317bd0f09938614fef7ce95f7108ed5929bb87664c757ab2f05ad9e36e1845c9"
+      },
+      {
+        "Size": 6701056,
+        "DiffID": "sha256:cac46e061cd0e31bb337e56621735d42ca6ad7cad665cbd848ac7601665c049f"
+      },
+      {
+        "Size": 3424256,
+        "DiffID": "sha256:9c508fb01a8d20067bdc8d06632aa0ac85546832d7dda66e8b15b2fe1a8bcfa1"
+      },
+      {
+        "Size": 1835520,
+        "DiffID": "sha256:25ee175f1dd39d24cffdaad242a851cf50d93528f1b3f321c7f1dd40569a3707"
+      },
+      {
+        "Size": 1810944,
+        "DiffID": "sha256:659476e345e8635174e5323f16b297bfd7162939d3afc20aaecf21c35e227c06"
+      },
+      {
+        "Size": 1634304,
+        "DiffID": "sha256:491c5da88d483bec8b0b69067d56c8ecfbe4e55a382a2361ebf92307b841e920"
+      },
+      {
+        "Size": 1115648,
+        "DiffID": "sha256:66c2e21e7c3ba7f4b118ab1e99bbf363384541f9aa6c768d7a5606bb95c1a9bf"
+      },
+      {
+        "Size": 894976,
+        "DiffID": "sha256:adaf9887f9b5ded5ec741a1207dd6ca11aaf991381cebc272625e4f27a9c9646"
+      },
+      {
+        "Size": 1790464,
+        "DiffID": "sha256:38f7f9880eec5aeab3fb78e5b4f1f2b4d017104d349b599aa23a54d25dce6841"
+      },
+      {
+        "Size": 233472,
+        "DiffID": "sha256:d65d3c9f3f7b4a4c5ae08eaae9ac6ff6b20b21f11bc26d08517f3a13431b71fc"
+      },
+      {
+        "Size": 1536,
+        "DiffID": "sha256:7415a567ddf7e131c9b94a8e6e0609c75b77c82cb73c4802a7145eb4f66b2e9d"
+      },
+      {
+        "Size": 7997952,
+        "DiffID": "sha256:fff7239145fe8b7caeff25b1e6ff003c13dd13b0375db9206022eced8b0074a5"
+      },
+      {
+        "Size": 5120,
+        "DiffID": "sha256:1a2e3fe59660ab0047fd2cbaa89db2a57c919e52a1abc30e6b749f3f14f813b8"
+      },
+      {
+        "Size": 38400,
+        "DiffID": "sha256:b59e0a07fd8d8e1098c79f3934bc22b949d7b9498807845e1a803077722a1e46"
+      },
+      {
+        "Size": 107008,
+        "DiffID": "sha256:4e990d2b718ddf621bb052bb817a896d8140d11fbc9d193ffd08a68d6bc78b86"
+      },
+      {
+        "Size": 9216,
+        "DiffID": "sha256:827cf0992ba57dc32cfa84de4bf6aa203ede1ad4e916ceef6450f9d385728c4a"
+      },
+      {
+        "Size": 5632,
+        "DiffID": "sha256:cb608233b0b0b0198a696d2f6b890804a2ca854d9da347b628e073dee617f06c"
+      }
+    ]
   },
   "Results": [
     {
-      "Target": "rafallltm/giropops-senhas:v8-dev (wolfi 20230201)",
+      "Target": "rafallltm/giropops-senhas:v10 (wolfi 20230201)",
       "Class": "os-pkgs",
       "Type": "wolfi"
     },

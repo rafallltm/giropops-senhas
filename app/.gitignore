@@ -2,3 +2,5 @@ venv
 .env
 error.log
 cosign.key
+__pycache__
+cosign.key
