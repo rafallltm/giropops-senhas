@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./app
-          file: ./app/Dockerfile
+          file: ./app/Dockerfile.dev
           push: true
           tags: |
             rafallltm/giropops-senhas:latest
